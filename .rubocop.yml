@@ -2,12 +2,18 @@ require:
   - rubocop-rails
 
 AllCops:
-  # アプリの Ruby のバージョンに合わせること!!
-  TargetRubyVersion: 2.7
+  TargetRubyVersion: 2.7.3
   NewCops: enable
+  Exclude:
+    - 'assets/**/*'
+    - 'bin/**/*'
+    - 'db/schema.rb'
+    - 'log/**/*'
+    - 'node_modules/**/*'
+    - 'tmp/**/*'
+    - 'vendor/**/*'
 
 StringLiterals:
-  # 変数展開やエスケープの必要がない場合でも，ダブルクォートを利用
   EnforcedStyle: double_quotes
 
 Rails/FilePath:
@@ -17,3 +23,21 @@ Rails/FilePath:
 Rails/Output:
   Exclude:
     - 'db/seeds.rb'
+
+Style/AsciiComments:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Layout/LineLength:
+  Max: 160
+
+Style/WordArray:
+  Enabled: false
+
+Style/SymbolArray:
+  Enabled: false

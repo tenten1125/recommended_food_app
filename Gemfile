@@ -28,6 +28,7 @@ gem "bootsnap", ">= 1.4.4", require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem "byebug", platforms: %i[mri mingw x64_mingw]
+  gem "carrierwave", "~> 2.0"
   gem "devise"
   gem "devise-i18n"
   gem "pry-byebug"
@@ -36,7 +37,6 @@ group :development, :test do
   gem "rails-i18n", "~> 6.0"
   gem "rubocop-performance", require: false
   gem "rubocop-rails", require: false
-  gem 'carrierwave', '~> 2.0'
 end
 
 group :development do

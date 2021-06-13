@@ -36,6 +36,7 @@ group :development, :test do
   gem "rails-i18n", "~> 6.0"
   gem "rubocop-performance", require: false
   gem "rubocop-rails", require: false
+  gem 'carrierwave', '~> 2.0'
 end
 
 group :development do

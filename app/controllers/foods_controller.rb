@@ -2,7 +2,7 @@ class FoodsController < ApplicationController
   before_action :set_food, only: %i[edit update destroy]
 
   def index
-    @foods = Food.all.includes(:user)
+    @foods = Food.all.includes(:user, :likes)
   end
 
   def new
